@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Compiler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>
+    <a href="onlinecompiler.html" target="_blank">Online Compiler</a>
+  </h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="compiler.html">Compiler</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="editor">
+      <textarea placeholder="Write your code here..."></textarea>
+      <button>Run Code</button>
+    </div>
+    <div class="output">
+      <h3>Output:</h3>
+      <pre id="result">Your output will appear here...</pre>
+    </div>
+  </main>
+
+
+  <script>
+    document.querySelector("button").addEventListener("click", () => {
+  const code = document.querySelector("textarea").value;
+  document.getElementById("result").textContent = `You wrote:\n${code}`;
+});
+  </script>
+</body>
+</html>
